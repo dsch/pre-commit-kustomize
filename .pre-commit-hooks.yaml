@@ -1,0 +1,9 @@
+- id: kustomize
+  name: kustomize
+  description: kustomize
+  types: [ yaml ]
+  language: docker_image
+  entry: --entrypoint /app/kustomize k8s.gcr.io/kustomize/kustomize:v3.8.7 build
+  pass_filenames: false
+  args: [ overlays/production ]
+  files: overlays/production
